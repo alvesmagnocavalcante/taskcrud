@@ -12,6 +12,7 @@ h1 {
 
 form {
     width: 90%; /* Reduzindo a largura do formulário */
+    max-width: 500px; /* Limitando a largura máxima do formulário */
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
@@ -21,13 +22,13 @@ form {
 
 input[type="text"],
 textarea {
-    width: 100%; /* Utilizando a largura total dos campos de entrada */
+    width: calc(100% - 20px); /* Ajustando a largura dos campos de entrada */
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    font-size: 16px; /* Aumentando o tamanho da fonte */
+    font-size: 16px;
 }
 
 button {
@@ -38,7 +39,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px; /* Aumentando o tamanho da fonte */
+    font-size: 16px;
 }
 
 button:hover {
@@ -67,5 +68,14 @@ a {
 @media screen and (max-width: 600px) {
     form {
         width: 100%; /* Utilizando a largura total da tela */
+        padding: 10px; /* Reduzindo o preenchimento do formulário */
+    }
+    input[type="text"],
+    textarea {
+        width: calc(100% - 20px); /* Ajustando a largura dos campos de entrada */
+        font-size: 14px; /* Reduzindo o tamanho da fonte */
+    }
+    button {
+        font-size: 14px; /* Reduzindo o tamanho da fonte */
     }
 }
